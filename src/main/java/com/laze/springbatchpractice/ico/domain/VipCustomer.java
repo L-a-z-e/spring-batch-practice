@@ -1,4 +1,4 @@
-package com.laze.springbatchpractice.domain;
+package com.laze.springbatchpractice.ico.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

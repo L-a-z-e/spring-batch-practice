@@ -1,6 +1,6 @@
-package com.laze.springbatchpractice.config;
+package com.laze.springbatchpractice.ico.config;
 
-import com.laze.springbatchpractice.domain.CustomerPurchaseSummary;
+import com.laze.springbatchpractice.ico.domain.CustomerPurchaseSummary;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.database.JdbcCursorItemReader;

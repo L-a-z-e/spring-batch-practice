@@ -1,0 +1,15 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "<http://mybatis.org/dtd/mybatis-3-mapper.dtd>">
+<mapper namespace="com.laze.springbatchpractice.ivl.mapper.IvlMapper">
+    <select id="selectIvlData" resultType="com.laze.springbatchpractice.ivl.domain.Ivl0001"
+            parameterType="java.util.Map">
+        SELECT id, product_code, base_value, evaluated_value, target_date
+        FROM investment_products
+        WHERE target_date = #{targetDate}
+    </select>
+
+    <update id="updateIvlData" parameterType="com.laze.springbatchpractice.ivl.domain.Ivl0001">
+        UPDATE investment_products
+        SET evaluated_value = #{evaluatedValue}
+        WHERE id = #{id}
+    </update>
+</mapper>

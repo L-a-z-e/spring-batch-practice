@@ -28,12 +28,27 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.3.1'
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
+    implementation 'me.paulschwarz:spring-dotenv:4.0.0'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
+
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client' // MariaDB 드라이버
+    runtimeOnly 'com.oracle.database.jdbc:ojdbc11:23.3.0.23.09' // Oracle 드라이버
+    runtimeOnly 'com.h2database:h2' // h2 드라이버
+
     compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'com.h2database:h2'
+
     annotationProcessor 'org.projectlombok:lombok'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.batch:spring-batch-test'
+    testImplementation 'org.testcontainers:junit-jupiter:1.19.7' // JUnit5와 연동
+    testImplementation 'org.testcontainers:mariadb:1.19.7'      // MariaDB 컨테이너
+
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testCompileOnly 'org.projectlombok:lombok:1.18.34'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 }
 
 tasks.named('test') {
